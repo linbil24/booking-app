@@ -1,0 +1,297 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f4f8;
+    padding: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.register-card {
+    display: flex;
+    width: 1050px;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.register-form-section {
+    flex: 1.6;
+    padding: 60px;
+}
+
+.register-info-section {
+    flex: 1;
+    background: linear-gradient(135deg, #1a4fba 0%, #0d2e71 100%);
+    color: #ffffff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.back-to-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.back-to-login:hover {
+    color: #1a4fba;
+}
+
+.register-header {
+    margin-bottom: 35px;
+}
+
+.register-header h1 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin: 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.register-header p {
+    color: #1a4fba;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* Step Indicator */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.step-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-dot.active {
+    background: #1a4fba;
+    transform: scale(1.4);
+    box-shadow: 0 0 0 4px rgba(26, 79, 186, 0.15);
+}
+
+.step-line {
+    width: 30px;
+    height: 2px;
+    background: #e2e8f0;
+}
+
+.step-line.active {
+    background: #1a4fba;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: -0.01em;
+}
+
+.input-group input,
+.input-group select {
+    padding: 14px 18px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #1a4fba;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(26, 79, 186, 0.05);
+}
+
+.input-group input.error,
+.input-group select.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.input-group input.error:focus,
+.input-group select.error:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-text {
+    color: #ef4444;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: -4px;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+.form-nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.prev-btn {
+    flex: 1;
+    padding: 16px;
+    background: #ffffff;
+    color: #475569;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.prev-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.register-btn {
+    flex: 2;
+    padding: 16px;
+    background: #1a4fba;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(26, 79, 186, 0.25);
+    transition: all 0.2s;
+}
+
+.register-btn:hover {
+    background: #133a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(26, 79, 186, 0.2);
+}
+
+.info-logo {
+    width: 80px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.benefits-list li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.benefits-list li::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+.benefits-list li.done {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.benefits-list li.done::before {
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+}
+
+@media (max-width: 1100px) {
+    .register-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+    .register-card {
+        flex-direction: column;
+    }
+
+    .register-info-section {
+        display: none;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,342 @@
+.book-now-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.book-now-card {
+    background: #fff;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    min-height: 600px;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sidebar Info Area */
+.book-sidebar {
+    flex: 0.35;
+    background: linear-gradient(180deg, #1a4fba 0%, #001242 100%);
+    padding: 50px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-sidebar h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.book-sidebar p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step-num {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.step.active .step-num {
+    background: #fff;
+    color: #1a4fba;
+    border-color: #fff;
+}
+
+.step-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Form Area */
+.book-form-section {
+    flex: 0.65;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    font-weight: 800;
+}
+
+.back-to-login {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.back-to-login:hover {
+    color: #ef4444;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-section label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Course Selection Cards */
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.course-option {
+    padding: 20px;
+    border: 2px solid #f1f5f9;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #f8fafc;
+}
+
+.course-option:hover {
+    border-color: #cbd5e1;
+    background: #fff;
+}
+
+.course-option.selected {
+    border-color: #1a4fba;
+    background: #eff6ff;
+    box-shadow: 0 4px 12px rgba(26, 79, 186, 0.05);
+}
+
+.course-option h4 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.course-option p {
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Input Styles */
+.book-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.book-input:focus {
+    border-color: #1a4fba;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(26, 79, 186, 0.05);
+}
+
+.book-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C2.185 5.355 2.403 5 2.808 5h9.384c.405 0 .623.355.357.658l-4.796 5.482a.5.5 0 0 1-.748 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+
+/* Navigation Buttons */
+.form-footer {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.next-btn {
+    flex: 1;
+    padding: 16px;
+    background: #1a4fba;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(26, 79, 186, 0.2);
+}
+
+.next-btn:hover {
+    background: #133a8a;
+    transform: translateY(-2px);
+}
+
+.prev-btn {
+    padding: 16px 30px;
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.prev-btn:hover {
+    background: #e2e8f0;
+}
+
+/* Success View */
+.success-view {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #f0fdf4;
+    color: #22c55e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.success-view h3 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.success-view p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.done-btn {
+    padding: 14px 40px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.done-btn:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .book-now-card {
+        flex-direction: column;
+    }
+
+    .book-sidebar {
+        padding: 40px;
+    }
+
+    .book-form-section {
+        padding: 40px 30px;
+    }
+
+    .step-indicator {
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+
+    .step-label {
+        display: none;
+    }
+}
